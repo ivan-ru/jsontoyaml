@@ -1,0 +1,17 @@
+{
+	"apiVersion": "v1",
+	"name": "txn",
+	"ports": [{
+			"port": "8084",
+			"targetPort": "8084",
+			"nodePort": "30004",
+			"name": "app"
+		},
+		{
+			"port": "58084",
+			"targetPort": "58084",
+			"nodePort": "32104",
+			"name": "grpc"
+		}
+	]
+}

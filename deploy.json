@@ -1,0 +1,116 @@
+{
+	"apiVersion": "extensions/v1beta1",
+	"domain": "saving",
+  "name": "txn",
+  "image": "tnindo/txn:v1stag.0.182",
+	"environments": [
+    {
+			"name": "GOPATH",
+			"value": "/go"
+		}, 
+    {
+			"name": "GOAPP",
+			"value": "txn"
+		},
+		{
+			"name": "GOENV",
+			"value": "kube"
+		},
+		{
+			"name": "SMITHBANKCODE",
+			"value": "009"
+		},
+		{
+			"name": "MQ",
+			"value": "kube"
+		},
+		{
+			"name": "HTTP",
+			"value": "kube"
+		},
+		{
+			"name": "RPC",
+			"value": "kube"
+		},
+		{
+			"name": "CRED_REDIS",
+			"value": "saving-redis:6379"
+		},
+		{
+			"name": "CRED_PGSQL",
+			"value": "postgres://postgres:root@tnindo-postgres:5432/postgres?sslmode=disable"
+		},
+		{
+			"name": "PATH_BATCH_EARNING",
+			"value": "storages/batch/earning/"
+		},
+		{
+			"name": "NUM_ROUTINE",
+			"value": "50"
+		},
+		{
+			"name": "DB_MAXIDLE",
+			"value": "50"
+		},
+		{
+			"name": "DB_MAXCONN",
+			"value": "50"
+		},
+		{
+			"name": "DOMAIN_ID",
+			"value": "02"
+		},
+		{
+			"name": "DOMAIN_ID_FIX",
+			"value": "05"
+		},
+		{
+			"name": "FIX_TXN_DOMAIN_HOST",
+			"value": "http://fd-txn:7084"
+		},
+		{
+			"name": "GL_DOMAIN_HOST",
+			"value": "http://172.17.0.1:30154"
+		},
+		{
+			"name": "RPC_RULESTXN",
+			"value": "general_transaction_rule@172.17.0.1:32103"
+		},
+		{
+			"name": "HTTP_TXN",
+			"value": "http://192.168.103.4:8080"
+		},
+		{
+			"name": "HTTP_SELFSVC",
+			"value": "http://172.17.0.1:30004"
+		},
+		{
+			"name": "HTTP_OTHER",
+			"value": "http://127.0.0.1:8084"
+		},
+		{
+			"name": "batch",
+			"value": "0"
+		},
+		{
+			"name": "MQ_ADDRESS_GL",
+			"value": "amqp://glrabbit:glrabbit@glrabbitmq:5672/"
+		},
+		{
+			"name": "PATH_BATCH_LOYALTY_RECON",
+			"value": "storages/batch/loyaltyreconcile/"
+		},
+		{
+			"name": "PATH_BATCH_CLEARING_POINT",
+			"value": "storages/batch/clearingpoint/"
+		},
+		{
+			"name": "STATIC_PATH",
+			"value": "/sav_txn/v1/storages"
+		},
+		{
+			"name": "DEBUG",
+			"value": "1"
+		}
+	]
+}
